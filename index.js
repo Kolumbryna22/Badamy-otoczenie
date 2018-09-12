@@ -13,10 +13,12 @@ fs.readdir('./pliki', 'utf-8', function(err, data) {
 function getData(doc) {
     var text;
 
-    fs.readFile(doc, 'utf-8', function(err, data) {
+    fs.readFile('./pliki/' + doc, 'utf-8', function(err, data) {
         if (err) throw err;
         text = data;
     });
+    
+    console.log(text);
 
     return text;
 };
