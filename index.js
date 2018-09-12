@@ -14,8 +14,9 @@ function getData(doc) {
     var text;
 
     fs.readFile(doc, 'utf-8', function(err, data) {
+        if (err) throw err;
         text = data;
     });
 
     return text;
-}
+};
